@@ -1,0 +1,20 @@
+{
+    "name": "kodemaster/todo",
+    "description": "Projeto Fullstack ToDo",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Kodemaster\\Todo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sandro",
+            "email": "devsandrounity@gmail.com"
+        }
+    ],
+    "require": {
+        "coffeecode/router": "^2.0",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
