@@ -2,6 +2,8 @@
 
 namespace Kodemaster\Todo\application\controllers;
 
+use Kodemaster\Todo\service\facades\AuthTokenFacade;
+
 class BaseController
 {
 
@@ -14,6 +16,6 @@ class BaseController
 
     public function index($data)
     {
-        var_dump($this->router, $data);
+        echo (AuthTokenFacade::generateToken("Sandro@gmail.com"));
     }
 }
