@@ -16,6 +16,6 @@ class BaseController
 
     public function index($data)
     {
-        echo (AuthTokenFacade::generateToken("Sandro@gmail.com"));
+
     }
 }
