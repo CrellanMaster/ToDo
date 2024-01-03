@@ -6,10 +6,15 @@ use Kodemaster\Todo\service\AuthToken;
 
 class AuthTokenFacade
 {
-    public static function generateToken($email): false|string
+    public static function generateToken($email, $id): false|string
     {
         $authToken = new AuthToken();
-        return $authToken->generateToken($email);
+        return $authToken->generateToken($email, $id);
     }
 
+    public static function authToken($token): array
+    {
+        $authToken = new AuthToken();
+        return $authToken->authToken($token);
+    }
 }

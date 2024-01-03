@@ -22,9 +22,4 @@ class DatabaseConnection
     {
         return $this->database;
     }
-
-    public function __destruct()
-    {
-        $this->database = null;
-    }
 }

@@ -7,10 +7,10 @@ use PDO;
 
 abstract class BaseModel
 {
-    protected PDO $db;
+    protected $db;
     protected string $table;
 
-    protected function __construct()
+    public function __construct()
     {
         $database = new DatabaseConnection();
         $this->db = $database->getConnection();
