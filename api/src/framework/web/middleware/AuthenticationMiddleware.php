@@ -20,6 +20,9 @@ class AuthenticationMiddleware
     {
         try {
             $request_headers = getallheaders();
+            if (!isset($request_headers["Authorization"])) {
+                throw new Exception();
+            }
             $data = AuthTokenFacade::authToken(str_replace("Bearer ", "", $request_headers["Authorization"]));
             if ($data["success"]) {
                 return true;

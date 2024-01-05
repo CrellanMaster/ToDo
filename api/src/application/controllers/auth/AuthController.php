@@ -36,7 +36,7 @@ class AuthController extends BaseController
                 $user = $data["data"];
                 $token = AuthTokenFacade::generateToken($user["email"], $user["id"]);
                 $this->response->setStatusCode(200);
-                $this->response->setContent(json_encode(["success" => true, "token" => $token]));
+                $this->response->setContent(json_encode(["success" => true, "token" => $token], JSON_PRETTY_PRINT));
             } else {
                 $this->response->setStatusCode(400);
             }

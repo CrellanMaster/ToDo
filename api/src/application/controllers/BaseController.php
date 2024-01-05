@@ -20,7 +20,5 @@ class BaseController
 
     public function index()
     {
-        var_dump($this->router);
-
     }
 }
