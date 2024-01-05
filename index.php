@@ -14,7 +14,7 @@ $router->group("api/v1")->namespace("Kodemaster\\Todo\\application\\controllers"
 $router->get("/", "BaseController:index", "home");
 
 $router->group("api/auth")->namespace("Kodemaster\\Todo\\application\\controllers\\auth");
-$router->get("/token", "AuthController:index", "auth.token");
+$router->post("/login", "AuthController:login", "auth.login");
 
 $router->group("api/v1", Kodemaster\Todo\framework\web\middleware\AuthenticationMiddleware::class)->namespace("Kodemaster\\Todo\\application\\controllers\\api");
 
