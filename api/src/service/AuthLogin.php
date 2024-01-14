@@ -8,7 +8,7 @@ use Kodemaster\Todo\application\models\entities\UserModel;
 class AuthLogin
 {
 
-    public function login($email, $password)
+    public function login($email, $password): bool|array
     {
         try {
             $userModel = new UserModel();

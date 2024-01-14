@@ -16,6 +16,11 @@ class BaseController
     {
         $this->router = $router;
         $this->response = new Response();
+        $this->response->headers->set("Access-Control-Allow-Origin", "http://localhost");
+        $this->response->headers->set("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+        $this->response->headers->set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        $this->response->headers->set("Access-Control-Allow-Credentials" , "true");
+        $this->response->headers->set("Content-type", "application/json");
     }
 
     public function index()
